@@ -1,0 +1,193 @@
+"","fish_id","species","family","size_tl_cm","mass_kg","site","habitat","FunctionalGroup","trophic_level","Feeding_path","Lmax","K","tm","Calcium","Iron","Zinc","Selenium","Omega3"
+"1","AQMA_001","Acanthurus mata","Acanthuridae",24,0.24,"M1","Macroalgae","Herbivore Grazer",2.53,"benthic",50,0.219,2.666666667,52.205,0.838,3.245,17,0.12068
+"2","AQMA_002","Acanthurus mata","Acanthuridae",23,0.23,"M1","Macroalgae","Herbivore Grazer",2.53,"benthic",50,0.219,2.666666667,51.068,0.508,2.813,13,0.09597
+"3","AVR_001","Aprion virescens","Lutjanidae",37.5,0.46,"M1","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,31.38,NA,0.311,41,0.19634
+"4","AVR_002","Aprion virescens","Lutjanidae",36.5,0.43,"M1","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,27.179,0.549,NA,16,0.18766
+"5","AVR_003","Aprion virescens","Lutjanidae",38,0.46,"M1","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,24.687,0.742,NA,11,0.26596
+"6","AVR_004","Aprion virescens","Lutjanidae",39,0.5,"C1","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,23.812,1.258,1.884,51,0.22274
+"7","AVR_005","Aprion virescens","Lutjanidae",51,1.2,"C1","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,15.915,0.357,1.294,36,0.26259
+"8","AVR_006","Aprion virescens","Lutjanidae",39.5,0.57,"C1","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,17.7,0.492,2.33,41,0.17388
+"9","AVR_007","Aprion virescens","Lutjanidae",43.5,0.71,"M1","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,27.246,0.902,NA,28,0.30146
+"10","AVR_008","Aprion virescens","Lutjanidae",39,0.56,"M1","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,34.725,0.536,2.266,58,0.25394
+"11","AVR_009","Aprion virescens","Lutjanidae",43,0.61,"C2","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,25.835,1.219,NA,8,0.13002
+"12","AVR_010","Aprion virescens","Lutjanidae",42,0.64,"C2","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,18.845,0.453,NA,14,0.13751
+"13","AVR_012","Aprion virescens","Lutjanidae",59,1.785,"M2","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,22.992,0.475,NA,31,0.12987
+"14","AVR_013","Aprion virescens","Lutjanidae",42.5,0.668,"M2","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,24.972,1.081,3.01,35,0.12668
+"15","AVR_014","Aprion virescens","Lutjanidae",43.5,0.75,"M2","Macroalgae","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,29.251,0.946,2.369,39,0.16871
+"16","CFF_001","Cephalopholis argus","Serranidae",36.5,0.8,"C2","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,38.678,0.23,NA,28,0.22269
+"17","CFI_001","Cephalopholis miniata","Serranidae",32.5,0.74,"M1","Macroalgae","Piscivore",4.3,"benthic",50,0.11,6.1,25.447,0.766,NA,20,NA
+"18","CFI_002","Cephalopholis miniata","Serranidae",24,0.22,"M1","Macroalgae","Piscivore",4.3,"benthic",50,0.11,6.1,35.084,0.081,NA,34,0.16371
+"19","CGX_002","Carangoides plagiotaenia","Carangidae",67.6,3,"M2","Macroalgae","Piscivore",4.03,"pelagic",50,0.633428571,2.702727273,23.62,2.261,NA,15,NA
+"20","CGX_003","Carangoides plagiotaenia","Carangidae",67,3,"M2","Macroalgae","Piscivore",4.03,"pelagic",50,0.633428571,2.702727273,25.232,1.681,NA,15,0.19309
+"21","COFO_001","Coris formosa","Labridae",29,0.4,"C4","Coral","Invertivore",3.349999905,"benthic",60,0.145666667,1,26.486,NA,1.915,42,0.10349
+"22","EBI_001","Epibulus insidiator","Labridae",21.5,0.16,"C1","Coral","Invertivore & Piscivore",4.01,"benthic",54,0.401046512,3.179545455,49.135,0.57,2.789,30,0.19322
+"23","EEA_001","Epinephelus fasciatus","Serranidae",17.5,0.08,"C1","Coral","Invertivore & Piscivore",3.7,"benthic",40,0.129999995,4.842621,NA,0.369,2.168,43,0.11043
+"24","EEA_002","Epinephelus fasciatus","Serranidae",20,0.1,"C1","Coral","Invertivore & Piscivore",3.7,"benthic",40,0.129999995,4.842621,NA,0.222,NA,64,0.10703
+"25","EER_001","Epinephelus merra","Serranidae",34,0.668,"M3","Macroalgae","Piscivore",4.38,"benthic",31,0.4,3.866666667,24.708,1.84,NA,15,0.17418
+"26","EFT_001","Cephalopholis sonnerati","Serranidae",22.5,0.21,"C2","Coral","Piscivore",3.81,"benthic",57,0.437230769,3.2,58.659,0.885,2.106,80,0.20659
+"27","EFT_002","Cephalopholis sonnerati","Serranidae",19.5,0.14,"C2","Coral","Piscivore",3.81,"benthic",57,0.437230769,3.2,54.647,0.559,2.76,54,0.14466
+"28","EFT_003","Cephalopholis sonnerati","Serranidae",23,0.22,"C2","Coral","Piscivore",3.81,"benthic",57,0.437230769,3.2,NA,1.247,3.456,NA,0.16663
+"29","EHG_001","Aethaloperca rogaa","Serranidae",31.5,0.55,"C1","Coral","Invertivore & Piscivore",4.2,"benthic",60,0.235996703,3.781,47.226,0.176,NA,28,0.17305
+"30","EHG_002","Aethaloperca rogaa","Serranidae",33,0.83,"C1","Coral","Invertivore & Piscivore",4.2,"benthic",60,0.235996703,3.781,47.635,0.553,3.484,54,0.3161
+"31","EHG_003","Aethaloperca rogaa","Serranidae",37.5,1.16,"M1","Macroalgae","Invertivore & Piscivore",4.2,"benthic",60,0.235996703,3.781,24.402,0.47,1.684,12,NA
+"32","EHG_004","Aethaloperca rogaa","Serranidae",39.5,1.26,"M1","Macroalgae","Invertivore & Piscivore",4.2,"benthic",60,0.235996703,3.781,NA,1.064,3.282,78,NA
+"33","EHG_005","Aethaloperca rogaa","Serranidae",29.5,0.606,"M3","Macroalgae","Invertivore & Piscivore",4.2,"benthic",60,0.235996703,3.781,63.465,0.925,2.881,59,0.15616
+"34","GPLP_001","Epinephelus longispinis","Serranidae",38.7,0.978,"C3","Coral","Invertivore & Piscivore",4.15,"benthic",55,0.211848837,3.866666667,28.405,0.107,NA,32,0.13761
+"35","GPLP_002","Epinephelus longispinis","Serranidae",31,0.432,"C3","Coral","Invertivore & Piscivore",4.15,"benthic",55,0.211848837,3.866666667,29.124,0.562,0.125,23,0.09506
+"36","GPSP_001","Epinephelus spilotoceps","Serranidae",28.5,0.35,"C2","Coral","Invertivore & Piscivore",3.972075472,"benthic",35,0.211848837,3.866666667,26.305,0.311,1.547,22,0.10689
+"37","HGF_001","Hemigymnus fasciatus","Labridae",26.5,0.36,"C1","Coral","Invertivore",3.5,"benthic",80,0.401046512,3.179545455,39.154,NA,3.852,32,0.19704
+"38","HIF_001","Cheilinus fasciatus","Labridae",29.5,0.43,"C1","Coral","Invertivore",3.37,"benthic",40,0.55,3.179545455,25.125,0.163,NA,31,0.07441
+"39","HUU_001","Cheilinus trilobatus","Labridae",22.5,0.21,"C1","Coral","Invertivore",3.920000076,"benthic",45,1,3.179545455,42.58,0.899,2.593,42,0.05294
+"40","HUU_002","Cheilinus trilobatus","Labridae",21.5,0.19,"M1","Macroalgae","Invertivore",3.920000076,"benthic",45,1,3.179545455,34.349,0.707,NA,34,0.12691
+"41","HUU_003","Cheilinus trilobatus","Labridae",25.2,0.252,"M3","Macroalgae","Invertivore",3.920000076,"benthic",45,1,3.179545455,48.298,0.928,2.844,23,0.09864
+"42","IGA_001","Siganus argenteus","Siganidae",26.7,0.23,"M2","Macroalgae","Herbivore Browser",2.630000114,"benthic",40,0.5,1.5,24.965,0.693,1.55,13,0.13211
+"43","IGA_006","Siganus argenteus","Siganidae",27.7,0.26,"M1","Macroalgae","Herbivore Browser",2.630000114,"benthic",40,0.5,1.5,64.296,0.366,2.308,47,0.17545
+"44","IGA_007","Siganus argenteus","Siganidae",31,0.38,"M1","Macroalgae","Herbivore Browser",2.630000114,"benthic",40,0.5,1.5,32.954,0.597,2.778,15,0.15185
+"45","IUU_001","Siganus sutor","Siganidae",30,0.39,"M1","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,18.631,0.436,0.049,3,0.10542
+"46","IUU_006","Siganus sutor","Siganidae",29,0.357,"M2","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,30.32,1.005,NA,NA,0.11405
+"47","IUU_007","Siganus sutor","Siganidae",31.6,0.492,"M2","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,28.687,1.389,NA,NA,0.34382
+"48","IUU_008","Siganus sutor","Siganidae",30.2,0.414,"M2","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,23.402,0.305,0.001,10,0.09995
+"49","IUU_009","Siganus sutor","Siganidae",27.8,0.304,"M3","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,14.782,0.384,0.083,9,0.08888
+"50","IUU_010","Siganus sutor","Siganidae",25.8,0.266,"M3","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,15.089,1.637,1.171,12,0.08146
+"51","IUU_011","Siganus sutor","Siganidae",28.8,0.346,"M3","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,38.006,1.037,NA,19,0.15702
+"52","IUU_012","Siganus sutor","Siganidae",30,0.38,"M1","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,23.545,0.776,NA,28,0.21482
+"53","IUU_013","Siganus sutor","Siganidae",26.5,0.28,"M1","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,25.978,0.892,2.164,30,0.13649
+"54","IUU_014","Siganus sutor","Siganidae",29.5,0.3,"M1","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,42.908,0.949,NA,21,0.09576
+"55","IUU_015","Siganus sutor","Siganidae",33,0.49,"M1","Macroalgae","Herbivore Browser",2,"benthic",45,0.7635,1.5,31.066,0.519,NA,6,0.13378
+"56","LEN_001","Lethrinus microdon","Lethrinidae",34,0.54,"M1","Macroalgae","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,17.548,0.218,0.068,34,0.20932
+"57","LEN_002","Lethrinus microdon","Lethrinidae",26.5,0.27,"C1","Coral","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,28.836,2.004,NA,53,0.10482
+"58","LEN_003","Lethrinus microdon","Lethrinidae",34.5,0.486,"C3","Coral","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,21.629,0.15,NA,28,0.1642
+"59","LEN_004","Lethrinus microdon","Lethrinidae",25.9,0.182,"M2","Macroalgae","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,29.965,0.845,3.632,68,0.07946
+"60","LEN_005","Lethrinus microdon","Lethrinidae",26.7,0.233,"M2","Macroalgae","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,28.962,0.981,3.413,59,0.17373
+"61","LEN_006","Lethrinus microdon","Lethrinidae",35.9,0.516,"M2","Macroalgae","Invertivore & Piscivore",3.8,"benthic",80,0.200000003,3.166347,18.106,0.324,NA,49,0.18376
+"62","LHN_001","Lethrinus nebulosus","Lethrinidae",27,0.23,"M1","Macroalgae","Invertivore & Piscivore",3.8,"benthic",87,0.189999998,3.438275,36.635,1.886,NA,NA,0.06248
+"63","LHV_001","Lethrinus variegatus","Lethrinidae",30,0.38,"C1","Coral","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,33.241,0.358,1.921,25,0.32618
+"64","LHV_002","Lethrinus variegatus","Lethrinidae",27,0.28,"C1","Coral","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,39.69,0.707,2.464,48,0.20288
+"65","LHV_003","Lethrinus variegatus","Lethrinidae",23.5,0.18,"C1","Coral","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,35.14,NA,1.981,65,0.14999
+"66","LHV_004","Lethrinus variegatus","Lethrinidae",24,0.18,"C1","Coral","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,22.416,0.478,1.708,38,0.15586
+"67","LHV_005","Lethrinus variegatus","Lethrinidae",21,0.12,"C1","Coral","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,27.081,0.348,1.837,40,0.16071
+"68","LHV_006","Lethrinus variegatus","Lethrinidae",20.2,0.122,"M3","Macroalgae","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,42.345,0.937,2.466,35,0.13945
+"69","LHV_007","Lethrinus variegatus","Lethrinidae",22,0.131,"M3","Macroalgae","Invertivore & Piscivore",3.5,"benthic",20,0.46,4.31875,47.766,0.456,2.263,55,0.12541
+"70","LJB_001","Lutjanus bohar","Lutjanidae",28,0.29,"M2","Macroalgae","Piscivore",4.3,"benthic",90,0.090999998,7.242646,28.331,0.442,1.874,40,0.16617
+"71","LJF_001","Lutjanus fulviflamma","Lutjanidae",22.5,0.18,"C1","Coral","Invertivore & Piscivore",3.85,"benthic",35,0.6,1.75,42.616,0.515,1.833,47,0.1698
+"72","LJF_002","Lutjanus fulviflamma","Lutjanidae",40,1.07,"C1","Coral","Invertivore & Piscivore",3.85,"benthic",35,0.6,1.75,39.806,0.596,2.572,60,0.20416
+"73","LJF_003","Lutjanus fulviflamma","Lutjanidae",27.5,0.53,"C1","Coral","Invertivore & Piscivore",3.85,"benthic",35,0.6,1.75,52.346,0.843,3.424,49,0.16194
+"74","LJG_001","Lutjanus gibbus","Lutjanidae",21,0.17,"M1","Macroalgae","Invertivore & Piscivore",4.1,"benthic",50,0.400000006,1.729073,35.187,0.755,1.857,63,0.27811
+"75","LTE_001","Lethrinus enigmaticus","Lethrinidae",21,0.16,"M1","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,31.338,1.947,NA,53,0.25516
+"76","LTE_002","Lethrinus enigmaticus","Lethrinidae",30.8,0.448,"C3","Coral","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,28.41,0.852,2.148,NA,0.0961
+"77","LTE_003","Lethrinus enigmaticus","Lethrinidae",31,0.494,"C3","Coral","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,29.435,0.678,3.222,NA,0.08859
+"78","LTE_004","Lethrinus enigmaticus","Lethrinidae",29,0.372,"C3","Coral","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,30.606,0.532,NA,81,0.09387
+"79","LTE_005","Lethrinus enigmaticus","Lethrinidae",27,0.28,"M2","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,38.199,0.241,NA,74,0.11031
+"80","LTE_006","Lethrinus enigmaticus","Lethrinidae",30,0.403,"M2","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,39.091,0.681,0.661,64,0.06558
+"81","LTE_007","Lethrinus enigmaticus","Lethrinidae",26.3,0.275,"M2","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,31.547,1.802,NA,68,0.10324
+"82","LTE_008","Lethrinus enigmaticus","Lethrinidae",28.5,0.394,"M3","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,20.428,0.333,0.157,61,0.08524
+"83","LTE_009","Lethrinus enigmaticus","Lethrinidae",24.5,0.242,"M3","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,33.202,NA,NA,35,0.08472
+"84","LTE_010","Lethrinus enigmaticus","Lethrinidae",25.5,0.262,"M3","Macroalgae","Invertivore & Piscivore",3.829999924,"benthic",55,0.149,4.31875,29.35,1.577,NA,23,0.07484
+"85","LTMA_001","Lethrinus mahsena","Lethrinidae",32.5,0.65,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,27.163,0.507,2.026,41,0.22692
+"86","LTMA_002","Lethrinus mahsena","Lethrinidae",23.5,0.23,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,32.152,0.447,1.822,54,0.09986
+"87","LTMA_003","Lethrinus mahsena","Lethrinidae",24,0.24,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,38.355,0.627,2.442,71,0.12002
+"88","LTMA_004","Lethrinus mahsena","Lethrinidae",22,0.19,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,36.349,0.342,2.749,39,0.08367
+"89","LTMA_005","Lethrinus mahsena","Lethrinidae",30.5,0.68,"C1","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,16.743,0.344,0.91,24,0.31444
+"90","LTMA_006","Lethrinus mahsena","Lethrinidae",30.5,0.54,"C2","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,53.392,NA,3.46,NA,0.26455
+"91","LTMA_007","Lethrinus mahsena","Lethrinidae",30.5,0.48,"C2","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,49.128,0.667,3.257,54,0.11935
+"92","LTMA_008","Lethrinus mahsena","Lethrinidae",28,0.42,"C2","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,31.67,NA,2.23,41,NA
+"93","LTMA_009","Lethrinus mahsena","Lethrinidae",28.5,0.365,"C3","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,39.659,1.979,2.559,66,0.14652
+"94","LTMA_010","Lethrinus mahsena","Lethrinidae",32.8,0.62,"C3","Coral","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,62.383,0.808,2.948,19,0.18548
+"95","LTMA_012","Lethrinus mahsena","Lethrinidae",28,0.398,"M2","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,38.064,0.706,2.198,8,0.29869
+"96","LTMA_013","Lethrinus mahsena","Lethrinidae",29.3,0.46,"M2","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,32.041,1.928,2.103,NA,NA
+"97","LTMA_014","Lethrinus mahsena","Lethrinidae",24.5,0.273,"M2","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,31.41,1.16,2.023,14,0.16052
+"98","LTMA_015","Lethrinus mahsena","Lethrinidae",26,0.33,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,39.01,0.386,2.674,56,0.16058
+"99","LTMA_016","Lethrinus mahsena","Lethrinidae",27,0.43,"M1","Macroalgae","Invertivore & Piscivore",3.4,"benthic",65,0.100000001,6.477055,50.599,0.957,3.195,40,NA
+"100","LTN_002","Lethrinus nebulosus","Lethrinidae",29.5,0.298,"C3","Coral","Invertivore & Piscivore",3.8,"benthic",87,0.189999998,3.438275,51.604,0.702,0.038,NA,0.1146
+"101","LTN_003","Lethrinus nebulosus","Lethrinidae",29.4,0.301,"M2","Macroalgae","Invertivore & Piscivore",3.8,"benthic",87,0.189999998,3.438275,24.287,0.687,2.93,NA,0.08118
+"102","LUJ_001","Lutjanus vitta","Lutjanidae",27,0.23,"C2","Coral","Invertivore & Piscivore",3.74000001,"benthic",40,0.32,1,49.846,NA,NA,NA,0.17265
+"103","LUJ_002","Lutjanus vitta","Lutjanidae",25,0.22,"C2","Coral","Invertivore & Piscivore",3.74000001,"benthic",40,0.32,1,41.481,0.766,1.954,65,0.14991
+"104","LUJ_003","Lutjanus vitta","Lutjanidae",25.5,0.22,"C2","Coral","Invertivore & Piscivore",3.74000001,"benthic",40,0.32,1,28.236,0.513,2.049,59,0.13514
+"105","LVK_001","Lutjanus kasmira","Lutjanidae",21.5,0.18,"M1","Macroalgae","Invertivore & Piscivore",3.9,"benthic",40,0.211999997,3.30727,40.611,0.876,2.076,71,0.32171
+"106","LVK_002","Lutjanus kasmira","Lutjanidae",21.5,0.17,"M1","Macroalgae","Invertivore & Piscivore",3.9,"benthic",40,0.211999997,3.30727,28.837,0.633,1.605,53,0.25905
+"107","LVK_003","Lutjanus kasmira","Lutjanidae",21.5,0.16,"M1","Macroalgae","Invertivore & Piscivore",3.9,"benthic",40,0.211999997,3.30727,39.633,0.91,2.855,53,NA
+"108","LVK_004","Lutjanus kasmira","Lutjanidae",22,0.15,"M1","Macroalgae","Invertivore & Piscivore",3.9,"benthic",40,0.211999997,3.30727,NA,0.69,2.487,62,0.20883
+"109","LXN_001","Lethrinus xanthochilus","Lethrinidae",48.5,1.92,"C1","Coral","Invertivore & Piscivore",3.8,"benthic",70,0.140000001,4.574151,37.48,1.059,1.597,NA,0.10254
+"110","NGU_001","Carangoides fulvoguttatus","Carangidae",38,0.68,"C1","Coral","Piscivore",4.02,"pelagic",120,0.633428571,2.702727273,24.097,NA,NA,18,0.17954
+"111","OXDG_001","Oxycheilinus digramma","Labridae",22.5,0.19,"C1","Coral","Piscivore",3.805,"benthic",40,0.401046512,3.179545455,33.143,0.714,1.996,33,0.17609
+"112","OXDG_002","Oxycheilinus digramma","Labridae",25.5,0.29,"C1","Coral","Piscivore",3.805,"benthic",40,0.401046512,3.179545455,43.032,0.744,2.477,41,0.11609
+"113","SCFA_001","Scarus falcipinnis","Scaridae",30.5,0.55,"C1","Coral","Herbivore Scraper",2,"benthic",60,0.73928125,3,27.538,0.383,0.046,12,0.11357
+"114","SCFA_002","Scarus falcipinnis","Scaridae",26,0.38,"C1","Coral","Herbivore Scraper",2,"benthic",60,0.73928125,3,24.23,0.589,2.977,18,0.09897
+"115","SCFA_004","Scarus falcipinnis","Scaridae",30.5,0.6,"C4","Coral","Herbivore Scraper",2,"benthic",60,0.73928125,3,21.614,0.444,NA,2,0.09592
+"116","SCFA_005","Scarus falcipinnis","Scaridae",27,0.42,"C4","Coral","Herbivore Scraper",2,"benthic",60,0.73928125,3,25.928,0.618,2.845,18,0.09011
+"117","SCX_001","Scarus niger","Scaridae",23,0.28,"C2","Coral","Herbivore Scraper",2,"benthic",40,0.736,3,49.487,0.68,2.228,16,0.08258
+"118","SCX_002","Chlorurus sordidus","Scaridae",35,0.94,"C2","Coral","Herbivore Scraper",2.62,"benthic",40,1.0915,3.666666667,45.877,0.576,3.287,63,0.08855
+"119","SCX_003","Scarus falcipinnis","Scaridae",27,0.4,"C2","Coral","Herbivore Scraper",2,"benthic",60,0.73928125,3,NA,0.725,2.017,20,0.09872
+"120","SCX_004","Scarus psittacus","Scaridae",27.5,0.37,"C4","Coral","Herbivore Scraper",2,"benthic",30,0.94,3,45.589,1.046,2.404,28,0.09286
+"121","SOFS_001","Sargocentron spiniferum","Holocentridae",22.5,0.21,"M1","Macroalgae","Invertivore",3.6,"benthic",51,0.360000014,1.9,32.746,0.365,1.461,NA,0.12318
+"122","TKB_001","Ctenochaetus binotatus","Acanthuridae",22.5,0.24,"M1","Macroalgae","Herbivore Grazer",2,"benthic",22,0.874833333,3.8,22.994,0.348,1.241,14,0.15946
+"123","TKB_002","Ctenochaetus binotatus","Acanthuridae",21.5,0.22,"M1","Macroalgae","Herbivore Grazer",2,"benthic",22,0.874833333,3.8,41.701,1.096,2.051,10,0.106
+"124","TRFS_001","Cantherhines pardalis","Monacanthidae",16.5,0.09,"C1","Coral","Invertivore",3.5,"benthic",25,0.616666667,1,16.561,0.288,1.218,46,0.04549
+"125","TRFS_002","Cantherhines pardalis","Monacanthidae",18.5,0.13,"C1","Coral","Invertivore",3.5,"benthic",25,0.616666667,1,29.895,1.822,2.508,41,0.07064
+"126","USTC_001","Scarus tricolor","Scaridae",25.5,0.31,"C1","Coral","Herbivore Scraper",2,"benthic",26.6,0.73928125,3,39.885,0.732,1.88,23,0.06679
+"127","USTC_002","Scarus tricolor","Scaridae",24,0.27,"C2","Coral","Herbivore Scraper",2,"benthic",26.6,0.73928125,3,30.551,0.555,2.192,20,0.08025
+"128","USY_001","Scarus ghobban","Scaridae",26,0.31,"M1","Macroalgae","Herbivore Scraper",2,"benthic",90,0.32,2,40.034,0.556,2.551,12,0.10686
+"129","USY_002","Scarus ghobban","Scaridae",31.7,0.532,"C3","Coral","Herbivore Scraper",2,"benthic",90,0.32,2,69.691,1.256,2.475,49,0.09428
+"130","USY_003","Scarus ghobban","Scaridae",22,0.21,"C1","Coral","Herbivore Scraper",2,"benthic",90,0.32,2,68.341,1.4,3.166,13,0.08471
+"131","USY_004","Scarus ghobban","Scaridae",24,0.28,"C1","Coral","Herbivore Scraper",2,"benthic",90,0.32,2,39.569,0.688,1.936,29,0.08103
+"132","USY_005","Scarus ghobban","Scaridae",27,0.39,"C4","Coral","Herbivore Scraper",2,"benthic",90,0.32,2,39.003,0.439,2.525,11,0.1018
+"133","USY_006","Scarus ghobban","Scaridae",38,1.01,"C4","Coral","Herbivore Scraper",2,"benthic",90,0.32,2,39.428,0.598,2.317,35,0.11785
+"134","USY_007","Scarus ghobban","Scaridae",35,0.82,"M1","Macroalgae","Herbivore Scraper",2,"benthic",90,0.32,2,34.624,1.369,NA,8,0.1044
+"135","USY_008","Scarus ghobban","Scaridae",24.5,0.3,"M1","Macroalgae","Herbivore Scraper",2,"benthic",90,0.32,2,46.264,0.947,2.67,18,0.10197
+"136","UUS_001","Chlorurus sordidus","Scaridae",25.5,0.36,"C1","Coral","Herbivore Scraper",2.62,"benthic",40,1.0915,3.666666667,23.08,0.711,2.041,28,0.1085
+"137","UVE_001","Scarus rubroviolaceus","Scaridae",26,0.35,"C1","Coral","Herbivore Scraper",2,"benthic",70,0.17,3.9,44.528,NA,3.084,14,0.06905
+"138","UVE_002","Scarus rubroviolaceus","Scaridae",30,0.54,"C2","Coral","Herbivore Scraper",2,"benthic",70,0.17,3.9,36.245,0.911,NA,41,0.08122
+"139","UVE_003","Scarus rubroviolaceus","Scaridae",29.5,0.89,"C4","Coral","Herbivore Scraper",2,"benthic",70,0.17,3.9,22.646,0.605,2.125,56,0.06824
+"140","UVN_001","Scarus niger","Scaridae",29.5,0.51,"C1","Coral","Herbivore Scraper",2,"benthic",40,0.736,3,30.187,0.517,NA,11,0.05946
+"141","UVN_002","Scarus niger","Scaridae",31,0.53,"C1","Coral","Herbivore Scraper",2,"benthic",40,0.736,3,24.315,0.416,0.128,18,0.08004
+"142","UVN_003","Scarus niger","Scaridae",29.5,0.67,"C4","Coral","Herbivore Scraper",2,"benthic",40,0.736,3,34.363,1.7,NA,NA,0.08599
+"143","WRS_003","Calotomus carolinus","Labridae",27.5,0.35,"C1","Coral","Herbivore Browser",2,"benthic",54,0.975,3.666666667,25.849,0.566,3.357,20,0.04509
+"144","WRS_004","Calotomus carolinus","Labridae",31,0.66,"C1","Coral","Herbivore Browser",2,"benthic",54,0.975,3.666666667,49.537,1.02,3.382,17,0.0764
+"145","WRS_005","Calotomus carolinus","Labridae",34,0.83,"C4","Coral","Herbivore Browser",2,"benthic",54,0.975,3.666666667,20.804,0.728,0.056,8,0.06765
+"146","WRS_006","Calotomus carolinus","Labridae",27,0.39,"C4","Coral","Herbivore Browser",2,"benthic",54,0.975,3.666666667,20.545,0.348,2.279,8,0.03085
+"147","WRS_007","Calotomus carolinus","Labridae",23,0.3,"C4","Coral","Herbivore Browser",2,"benthic",54,0.975,3.666666667,24.973,0.42,1.716,8,0.05267
+"148","ZEDJ_001","Zebrasoma desjardinii","Acanthuridae",24.5,0.34,"M1","Macroalgae","Herbivore Grazer",2,"benthic",40,0.31425,3.8,34.191,1.575,2.016,6,0.13575
+"149","ZEDJ_002","Zebrasoma desjardinii","Acanthuridae",23,0.26,"M1","Macroalgae","Herbivore Grazer",2,"benthic",40,0.31425,3.8,34.593,0.556,1.848,7,0.17434
+"150","ZEDJ_003","Zebrasoma desjardinii","Acanthuridae",25.5,0.34,"M1","Macroalgae","Herbivore Grazer",2,"benthic",40,0.31425,3.8,36.171,0.516,2.079,9,0.19018
+"151","ZEDJ_004","Zebrasoma desjardinii","Acanthuridae",28,0.49,"M1","Macroalgae","Herbivore Grazer",2,"benthic",40,0.31425,3.8,30.219,NA,1.862,10,0.3121
+"152","AVR_011","Aprion virescens","Lutjanidae",60.6,1.78,"C3","Coral","Piscivore",4.3,"pelagic",112,0.140000001,4.286896,NA,NA,NA,NA,0.1952
+"153","ZEDJ_005","Zebrasoma desjardinii","Acanthuridae",29.5,0.55,"M1","Macroalgae","Herbivore Grazer",2,"benthic",40,0.31425,3.8,NA,NA,NA,NA,0.20083
+"154","ASR01","Cephalopholis argus","Serranidae",31,0.61,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,1.842205,1.038095,20.875,NA
+"155","ASR05","Cephalopholis argus","Serranidae",21,0.184,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.86056,0.7203825,18.7,NA
+"156","ASR07","Cephalopholis argus","Serranidae",19,0.1085,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.320985,0.486685,14.275,NA
+"157","ASR08","Cephalopholis argus","Serranidae",17.25,0.0855,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.7799525,0.61312,13.7,NA
+"158","ASR09","Cephalopholis argus","Serranidae",16.5,0.08,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.6602025,0.9023525,19.225,NA
+"159","ASR10","Cephalopholis argus","Serranidae",30.5,0.4785,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.6581525,0.6176975,13.15,NA
+"160","ASR11","Cephalopholis argus","Serranidae",26.25,0.3165,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,1.0949625,0.6875225,21.075,NA
+"161","BOM02","Cephalopholis argus","Serranidae",27.75,0.3595,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.3858,0.60423,38.575,NA
+"162","BOM03","Cephalopholis argus","Serranidae",30.5,0.491,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.269975,0.7844675,27,NA
+"163","BOM05","Cephalopholis argus","Serranidae",26.25,0.307,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.2235375,0.393155,19.8,NA
+"164","BOM06","Cephalopholis argus","Serranidae",23,0.1935,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.2729625,1.2642025,16.15,NA
+"165","BOM08","Cephalopholis argus","Serranidae",15,0.0575,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.41038,1.44954,31.675,NA
+"166","BOM09","Cephalopholis argus","Serranidae",16.75,0.073,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.28021,1.03613,22.625,NA
+"167","BOM10","Cephalopholis argus","Serranidae",17,0.0825,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.3476,0.4659825,34.75,NA
+"168","MAN01","Cephalopholis argus","Serranidae",22.25,0.171,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.35962,0.7095675,18.125,NA
+"169","MAN02","Cephalopholis argus","Serranidae",23.25,0.224,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.298855,0.5864875,20.9,NA
+"170","MAN03","Cephalopholis argus","Serranidae",21.5,0.1705,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.5518375,0.3346025,15.425,NA
+"171","MAN04","Cephalopholis argus","Serranidae",25,0.2475,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.22478,0.88938,17.825,NA
+"172","MAN05","Cephalopholis argus","Serranidae",14,0.0485,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.2225725,0.382945,14.2,NA
+"173","MAN06","Cephalopholis argus","Serranidae",24,0.2395,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.4469575,0.4440425,14.825,NA
+"174","MAN07","Cephalopholis argus","Serranidae",17.5,0.0775,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.2041375,0.3829825,13.475,NA
+"175","MAN08","Cephalopholis argus","Serranidae",24,0.2425,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.5571525,0.64676,20,NA
+"176","MAN09","Cephalopholis argus","Serranidae",28,0.423,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.21295,0.3940875,21.3,NA
+"177","MAN10","Cephalopholis argus","Serranidae",34.25,0.6605,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.586565,0.6607475,22.825,NA
+"178","MAN11","Cephalopholis argus","Serranidae",24.5,0.245,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.8576325,0.6148525,16.5,NA
+"179","MAN12","Cephalopholis argus","Serranidae",33.25,0.648,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.165,0.412675,22.575,NA
+"180","MEP01","Cephalopholis argus","Serranidae",34.25,0.7225,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.471135,0.45399,46.165,NA
+"181","MEP06","Cephalopholis argus","Serranidae",31,0.482,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,1.06923,0.748365,39.25,NA
+"182","MEP08","Cephalopholis argus","Serranidae",15.5,0.064,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.89285,0.89285,47.075,NA
+"183","MWP01","Cephalopholis argus","Serranidae",21.25,0.1595,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.24585,0.4379525,12.575,NA
+"184","MWP02","Cephalopholis argus","Serranidae",20.5,0.137,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.2117575,0.3920725,14.5,NA
+"185","MWP03","Cephalopholis argus","Serranidae",23.5,0.2315,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.1607,0.3123125,16.075,NA
+"186","MWP06","Cephalopholis argus","Serranidae",40.5,1.214,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.4467275,0.3716275,15.1,NA
+"187","MWP07","Cephalopholis argus","Serranidae",17.5,0.0795,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.3727625,0.5455825,19.325,NA
+"188","MWP08","Cephalopholis argus","Serranidae",22,0.16,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.83051,0.45527,21.85,NA
+"189","MWP10","Cephalopholis argus","Serranidae",36,0.808,"M4","Coral","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.504445,0.4890925,14.575,NA
+"190","PSW09","Cephalopholis argus","Serranidae",29.25,0.4505,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,1.1301925,0.629335,15.55,NA
+"191","PSW10","Cephalopholis argus","Serranidae",27,0.353,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,1.1724375,1.6198325,78.31,NA
+"192","PSW11","Cephalopholis argus","Serranidae",32,0.5425,"M4","Macroalgae","Piscivore",4.16,"benthic",60,0.437230769,3.2,NA,0.594575,0.562935,15.8,NA

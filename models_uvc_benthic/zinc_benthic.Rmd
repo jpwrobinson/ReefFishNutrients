@@ -1,0 +1,133 @@
+---
+title: "Zinc ~ benthic model"
+output: html_notebook
+---
+
+```{r setup}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+```
+
+```{r}
+library(here)
+library(funk)
+library(rethinking)
+library(tidyverse); theme_set(theme_sleek())
+
+load(file = here('results/uvc_preds/UVC_nutrient_benthic_formodels.Rdata'))
+focal.nut='Zn.mg.ha'
+```
+
+
+```{r}
+## subset data and fit model
+focal<-nut %>% filter(nutrient == focal.nut); mean(focal$value_corr)
+
+focal$Location<-as.factor(focal$Location)
+focal$Year<-as.factor(focal$Year)
+
+par(mfrow=c(1,1))
+hist(focal$value_corr, main = focal.nut, xlab=paste(focal.nut))
+    
+focal.fit<-focal %>% ungroup() %>% select(value_corr, PC1, Location, Year)
+```
+
+```{r}
+## PC1 is continuous exp. var, site and year are random intercepts
+nt_m <- ulam(
+    alist(
+        value_corr ~ dnorm( mu , sigma ) ,
+        mu <- a + b*PC1 + X1[Location]*sigma_site + X2[Year]*sigma_year,
+
+        # priors
+        X1[Location] ~ dnorm(0, 1),
+        X2[Year] ~ dnorm(0, 1),
+        a ~ dnorm( 0 , 100) ,
+        b ~ dnorm( 0 , 10 ) ,
+        # X1[Location] ~ dnorm(0, sigmar),
+        # X2[Year] ~ dnorm(0, sigmar2),
+		c(sigma, sigma_site, sigma_year) ~ dexp(1)
+			), 
+    		data=data.frame(focal.fit),
+    		iter=5000, warmup=1500, chains=3, cores = 6, control=list(adapt_delta=0.99))
+```
+
+```{r}
+d<-divergent(nt_m)
+if(d == 0) print('BOOM BOOM NO DIVERGENT CHAINS') else
+print(paste('STOP DIVERGENCE PROBLEM: ', d, ' chains'))
+```
+
+#### Convergence and posterior predictions 
+
+
+```{r}
+dashboard(nt_m)
+```
+
+```{r}
+plot(nt_m)
+```
+
+```{r}
+print(precis(nt_m, 2))
+```
+
+```{r}
+pairs2(extract.samples(nt_m)[c(3:4)])
+```
+
+```{r}
+plot(precis(nt_m,2))
+```
+
+```{r}
+traceplot(nt_m, pars=c('a', 'b'))
+```
+
+```{r}
+# sample y from posterior
+y_post<-sim(nt_m)
+focal$y_post<-apply(y_post, 2, mean)
+ggplot(focal, aes(y_post, value_corr, col=Year)) + 
+        geom_point() + 
+        geom_abline(intercept=0, slope=1) +
+        lims(y=c(min(focal$value_corr), max(focal$value_corr)),x=c(min(focal$value_corr), max(focal$value_corr))) +
+        labs(x = 'Posterior mean', y = 'Observed', subtitle = focal.nut)
+```
+```{r} 
+
+## plot PC prediction
+
+pc.seq<-seq(min(focal$PC1), max(focal$PC1), length.out=30)
+
+	# replace varying intercept samples with zeros
+	# 1000 samples by 12 sites and 6 years
+	a_location_zeros <- matrix(0,1000,12)
+	a_year_zeros <- matrix(0,1000,6)
+	
+	mu <- link(nt_m, data=data.frame(PC1=pc.seq, Location = focal$Location[1], Year = focal$Year[1]), replace=list(X1=a_location_zeros, X2 = a_year_zeros))
+	mu.mean <- apply( mu , 2 , mean )
+	mu.HPDI <- apply( mu , 2 , HPDI , prob=0.95)
+  low95<-mu.HPDI[1,]; up95<-mu.HPDI[2,]
+  
+	base<-link(nt_m, data=data.frame(PC1=mean(focal$PC1[focal$Year == '1994']), Location = focal$Location[1], Year = '1994'), replace=list(X1=a_location_zeros))
+	base.mean <- apply( base , 2 , mean )
+	base.HPDI <- apply( base , 2 , HPDI , prob=0.95)
+
+plot(focal$PC1, focal$value_corr, pch=21, bg='black', xlab='PC1', ylab='')
+abline(h = mean(focal$value_corr), lty=2, col='grey')
+shade( rbind(low95, up95) , pc.seq ,col=alpha(rangi2, 0.2))
+lines(pc.seq,  mu.mean)
+axis(1, at = c(-5), labels=NA); axis(2); box()
+add_label(0.76, 0.09, focal.nut, font=2, cex=1.2)
+mtext(2, text=expression(paste('mg 100g'^-1)), line=2, cex=0.8)
+
+```
+
+```{r}
+## bind and save as Rdata	
+output<-list(nt_m, focal)
+save(output, file = here(paste0('results/final/uvc_',	 focal.nut, '_05-17', '.Rdata')))
+```
+
+
