@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r setup}
-knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_knit$set(root.dir = normalizePath("../.."))
 ```
 
 ```{r}
@@ -26,7 +26,7 @@ nut='Ca'
 focal<-stir %>% filter(nutrient == nut) %>%
 		select(nutrient, value, fish_id, units, species, family, 
 					mass_kg, Lmax_prop, trophic_level, Lmax, K, tm, Feeding_path, site) %>%
-    mutate(Lmax = log(Lmax), K = log(K))
+    mutate(Lmax = log(Lmax), K = log(K), Feeding_path = as.factor(Feeding_path))
 
 ## drop outliers
 outlier.lims<-2*sd(focal$value) + mean(focal$value)
@@ -84,9 +84,9 @@ nt_m<-ulam(
     		  B5 ~ dnorm(-0.857, 0.480),
     		  B6 ~ dnorm(-0.065, 0.224),
     		  B7 ~ dnorm(-0.159, 0.253),
-          c(sigma, sigma_site, sigma_fam) ~ dcauchy(0, 2)
+          c(sigma, sigma_site, sigma_fam) ~ dexp(2)
         ),
-        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 4, control=list(adapt_delta=0.99))
+        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 4, log_lik = TRUE, control=list(adapt_delta=0.99))
 
 # load(paste0('results/final/',	 nut, '_scaled', '.Rdata'))
 # nt_m<-output[[1]]
@@ -197,6 +197,8 @@ pred<-expand.grid(species = unique(focal$species),
     mast$lower50<-exp(mast$lower50); mast$upper50<-exp(mast$upper50)
     base$mu<-exp(base$mu)
     base$lower95<-exp(base$lower95); base$upper95<-exp(base$upper95)
+    
+
 
 ```
 ```{r}

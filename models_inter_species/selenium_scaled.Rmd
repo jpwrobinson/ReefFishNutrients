@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r setup}
-knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_knit$set(root.dir = normalizePath("../.."))
 ```
 
 ```{r}
@@ -26,7 +26,7 @@ nut='Se'
 focal<-stir %>% filter(nutrient == nut) %>%
 		select(nutrient, value, fish_id, units, species, family, 
 					mass_kg, Lmax_prop, trophic_level, Lmax, K, tm, Feeding_path, site) %>%
-    mutate(Lmax = log(Lmax), K = log(K))
+    mutate(Lmax = log(Lmax), K = log(K), Feeding_path = as.factor(Feeding_path))
 
 ## drop outliers
 outlier.lims<-2*sd(focal$value) + mean(focal$value)
@@ -91,7 +91,7 @@ nt_m<-ulam(
     #       X2[family] ~ dnorm(0, sigma_fam),
           c(sigma_site, sigma_fam) ~ dexp(2)
         ),
-        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 6, control=list(adapt_delta=0.99), messages=FALSE)
+        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 6, control=list(adapt_delta=0.99), log_lik=TRUE, messages=FALSE)
 
 # load(paste0('results/final/',	 nut, '_scaled', '.Rdata'))
 # nt_m<-output[[1]]

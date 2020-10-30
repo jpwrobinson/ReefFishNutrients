@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r setup}
-knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_knit$set(root.dir = normalizePath("../.."))
 ```
 
 ```{r}
@@ -27,7 +27,7 @@ focal<-stir.sub %>% filter(nutrient == nut) %>%
 		select(nutrient, value, fish_id, units, species, family, 
 					mass_kg, Lmax_prop, trophic_level, Lmax, K, tm, Feeding_path, habitat, site) %>%
       mutate(habitat_dummy = ifelse(habitat == 'Coral', 0, 1)) %>%
-      mutate(Lmax = log(Lmax), K = log(K))
+      mutate(Lmax = log(Lmax), K = log(K), Feeding_path=as.factor(Feeding_path))
 
 ## drop outliers
 outlier.lims<-2*sd(focal$value) + mean(focal$value)
@@ -77,14 +77,13 @@ nt_m<-ulam(
         alist(
           value ~ dgamma2(mu, scale),
           # trait fixed effects
-          log(mu) <- a + a_sp[species] + B3*trophic_level + B4*Lmax + 
-                B5*K + B6*tm + B7*benthic_pelagic_dummy + (B8 + B8_sp[species])*habitat_dummy + # fixed
-          			X1[site]*sigma_site + X2[family]*sigma_fam, 	# random site & family effect
+          log(mu) <- 
+                B3*trophic_level + B4*Lmax + 
+                B5*K + B6*tm + B7*benthic_pelagic_dummy + 
+                a + a_sp[species] + (B8 + B8_sp[species])*habitat_dummy  + # fixed
+          			X1[site]*sigma_site, # random site effect
           
           # adaptive priors - non-centered
-          # transpars> matrix[species,2]:B8_sp <-
-          #         compose_noncentered(sigma_species, L_Rho, z_species),
-          # matrix[2, species]:z_species ~ normal(0, 1),
           c(a_sp, B8_sp)[species] ~ multi_normal(0, Rho, sigma_species),
           
           # fixed priors
@@ -96,21 +95,17 @@ nt_m<-ulam(
     		  B7 ~ dnorm(0.0752, 0.119),
     		  B8 ~ dnorm(0, 1),
     		  X1[site] ~ dnorm(0, 1),
-    		  X2[family] ~ dnorm(0, 1),
-          # vector[2]:sigma_species ~ dexp(1),
-          c(sigma_species, sigma_site, sigma_fam) ~ dexp(2),
-          scale ~ dexp(2),
-    		  Rho ~ lkj_corr(2)
-          # cholesky_factor_corr[2]:L_Rho ~ lkj_corr_cholesky(2),
-          
-          # compute ordinary correlation matrixes from Cholesky factors
-          # gq> matrix[2,2]:Rho_species<<-multiply_lower_tri_self_transpose(L_Rho)
+    		  
+          c(sigma_site, sigma_species) ~ dexp(1),
+          scale ~ dexp(1),
+    		  Rho ~ lkj_corr(3)
         ),
-        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 6, control=list(adapt_delta=0.99), message=FALSE)
+        data=focal.fit, iter=5000, warmup=1500, chains=3, cores = 6, control=list(adapt_delta=0.99), message=FALSE, log_lik=TRUE)
 
-# load(paste0('results/final/',	 nut, '_scaled_habitat', '.Rdata'))
+# load(paste0('results/final/',	 nut, '_scaled_habitat_NC', '.Rdata'))
 # nt_m<-output[[1]]
 ```
+
 #### Divergence
 
 ```{r}
@@ -138,14 +133,14 @@ plot(nt_m)
 ```
 
 ```{r}
-# funk::pairs2(extract.samples(nt_m)[c(2:8)])
+# funk::pairs2(extract.samples(nt_m)[c(3:8)])
 ```
 
 ```{r}
 plot(precis(nt_m, 2), xlab='estimate, 89 CIs')
 ```
 ```{r}
-traceplot(nt_m, pars=c('a', 'B3', 'B4', 'B5', 'B6', 'B7','B8'))
+traceplot(nt_m, pars=c('B3', 'B4', 'B5', 'B6', 'B7'))
 ```
 
 ```{r}
@@ -159,23 +154,15 @@ ggplot(focal, aes(y_post, value, col=family)) +
         labs(x = 'Posterior mean', y = 'Observed', subtitle = nut)
 ```
 
-```{r}
-post<-extract.samples(nt_m)
-mu <-post$a
-ggplot(data.frame(x=exp(mu))) + 
-            geom_density(aes(x), fill='grey') + 
-            labs(x='mu', title=paste('Mean', nut, 'posterior')) +       
-            geom_vline(xintercept=median(exp(mu)), col='red')
 
-```
 ```{r}
 post<-extract.samples(nt_m, pars=c( 'B8'))
 # mu.coral <- post$B8[,1]
 mu.ma <- post$B8
 # hab<-data.frame(x = c(mu.coral, mu.ma), habitat = c(rep('Coral', 10500), rep('Macroalgae', 10500)))
 ggplot() + 
-            geom_density(aes(((mu.ma))), fill='grey', alpha=0.5) + 
-          
+            geom_density(aes(((mu.ma))), fill='red', alpha=0.5) + 
+          # geom_density(aes(((mu.coral))), fill='grey', alpha=0.5) + 
             labs(x='mu', title='Mean zinc posterior') +       
             theme(legend.position = c(0.2, 0.5)) +
             # geom_vline(xintercept=median((mu.coral)), col='black') +
@@ -196,11 +183,13 @@ pred<-expand.grid(species = unique(focal$species),
 	pred$family <-focal$family[match(pred$species, focal$species)]
 	pred$habitat<-focal$habitat[match(pred$habitat_dummy, focal$habitat_dummy)]
 
-	# replace varying intercept samples with zeros (SITE)
+	# replace varying intercept samples with zeros (SITE AND FAMILY)
+	# 1000 samples by 21 sites
 	a_site_zeros <- matrix(0,1000,uniques(focal$site))
-	a_family_zeros <- matrix(0,1000,uniques(focal$family))
 	
-	meds<-link(nt_m, data=pred, n=1000, replace=list(X1=a_site_zeros, X2 = a_family_zeros))
+	post<-extract.samples(nt_m)
+	post$X1<-a_site_zeros
+	meds<-link(nt_m, data = pred, post=post, n=1000)
 
 	pred$mu<-apply(meds, 2, median)
 	pred$lower95 <- apply( meds , 2 , HPDI , prob=0.95 )[1,]
@@ -212,19 +201,17 @@ pred<-expand.grid(species = unique(focal$species),
 
 	## estimate average nutrient concentration irrespective of species
 	base<-expand.grid(
-						  species = unique(focal$species)[3],
 						  family = unique(focal$family)[2],
-						  site = levels(focal$site)[4], 
-						  habitat_dummy =c(1,2),
+						  site = levels(focal$site)[2], 
+						  species=unique(focal$species)[1],
 						  trophic_level = 0, 
 						  Lmax = 0, 
 						  K = 0, 
 						  tm = 0, 
-						  benthic_pelagic_dummy = 0)
-  base$habitat<-focal$habitat[match(base$habitat_dummy, focal$habitat_dummy)]
-
+						  benthic_pelagic_dummy = 0,
+						  habitat_dummy =1)
 	# replace varying intercept samples with zeros (SITE AND FAMILY)
- 	meds<-link(nt_m, data=base, n=1000, replace=list(X1=a_site_zeros, X2 = a_family_zeros))
+	meds<-link(nt_m, data=base, n=1000, replace=list(X1=a_site_zeros, X2 = a_family_zeros))
 
 	base$mu<-apply(meds, 2, median)
 	base$lower95 <- apply( meds , 2 , HPDI , prob=0.95 )[1,]
@@ -242,7 +229,6 @@ pred<-expand.grid(species = unique(focal$species),
 
 ```{r}
 ## plot species posterior predictions
-# mast<-rbind(mast, base)
 
 stir<-stir.sub %>% filter(nutrient == nut)
 
@@ -264,13 +250,13 @@ names(cols.named)<-cols$FG
 pos=position_dodge(width=0.5)
 
 ggplot(mast ) + 
-	# geom_rect(data = base, aes(ymin = lower95, ymax = upper95, xmin = -Inf, xmax=Inf), fill='grey', alpha=0.2) +
+#	geom_rect(data = base, aes(ymin = lower95, ymax = upper95, xmin = -Inf, xmax=Inf), fill='grey', alpha=0.2) +
 	# geom_hline(data = base, aes(yintercept=mu), col='red') +
 	geom_pointrange(
 		aes(y = mu, x = species, ymin = lower95, ymax = upper95,col=habitat), position=pos) +
 	geom_point(aes(y = mu, x = species,  col=habitat), size=2, position=pos) +
 	geom_jitter(data = stir, aes(species, value, col=habitat), alpha=0.25, width=0.15, size=0.75) +
-	labs(y = 'Mineral concentration (ug per 100g)', x ='') +
+	labs(y = 'Mineral concentration (g per 100g)', x ='') +
 	# scale_colour_manual(values = cols.named) +
 	facet_wrap(~nutrient, nrow=1, scales='free_x') + 
 	coord_flip() + 
@@ -288,7 +274,7 @@ ggplot(mast ) +
 ## save model output
 # save posterior preds
 post<-as.data.frame(extract.samples(nt_m)) %>% gather(param, dist) %>% 
-		filter(param %in% c('a', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8')) %>% mutate(nutrient = nut)
+		filter(param %in% c( 'B3', 'B4', 'B5', 'B6', 'B7', 'B8')) %>% mutate(nutrient = nut)
 
 ## bind and save as Rdata	
 output<-list(nt_m, post, focal)
